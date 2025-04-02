@@ -7,8 +7,10 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
+    public float verticalInput;
     public float speed = 10.0f;
     public float xRange = 10;
+    public float zRange = 10;
     public GameObject projectilePrefab;
 
 
@@ -35,5 +37,7 @@ public class PlayerController : MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
     }
 }
