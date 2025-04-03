@@ -23,8 +23,8 @@ public class DetectCollisions : MonoBehaviour
         Destroy(other.gameObject);
     }
 
-    void OnTrigger(Collider Player)
-    {
-        Debug.Log("Game Over");
-    }
+   
+    
+       
+    
 }
